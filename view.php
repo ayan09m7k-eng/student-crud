@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>View Students List</title>
 </head>
 <body>
-    <h1>hello World</h1>
+    <form method="POST" enctype="multipart/form-data">
+        
+    </form>
 </body>
 </html>

@@ -1,0 +1,11 @@
+CREATE TABLE students(
+    ID int AUTO_INCREMENT PRIMARY KEY
+    );
+
+ALTER TABLE students
+ADD name VARCHAR(100);
+
+ALTER TABLE students
+ADD email VARCHAR(170);
+
+
