@@ -14,7 +14,7 @@ if (isset($_GET["sort"]) && strtolower($_GET["sort"]) === "desc") {
 }
 
 /*----------------------------------Pagination--------------------------------------*/
-$limit = 6;
+$limit = 5;
 $page = isset($_GET["page"]) ? (int)$_GET["page"] : 1;
 if ($page < 1) $page = 1;
 $offset = ($page - 1) * $limit;
@@ -31,9 +31,9 @@ $totalRecords = mysqli_fetch_assoc($countResult)["total"];
 $totalPages = ceil($totalRecords / $limit);
 
 /*------------------------------------Main Query-----------------------------------------*/
-$sql = "SELECT * FROM students WHERE name LIKE ? OR email LIKE ? ORDER BY name $sort LIMIT ? OFFSET ?";
+$sql = "SELECT * FROM students WHERE name LIKE ? OR email LIKE ? ORDER BY name $sort LIMIT $limit OFFSET $offset";
 $stmt = mysqli_prepare($conn, $sql);
-mysqli_stmt_bind_param($stmt, "ssii", $searchParam, $searchParam, $limit, $offset);
+mysqli_stmt_bind_param($stmt, "ss", $searchParam, $searchParam);
 mysqli_stmt_execute($stmt);
 $result = mysqli_stmt_get_result($stmt);
 ?>
@@ -237,14 +237,14 @@ $result = mysqli_stmt_get_result($stmt);
                         <?php if (mysqli_num_rows($result) > 0): ?>
                             <?php while ($row = mysqli_fetch_assoc($result)): ?>
                                 <?php 
-                                    $studentId = $row['id'] ?? $row['student_id'] ?? reset($row); 
+                                    $studentId = $row['ID'] ?? $row['id'] ?? $row['student_id'] ?? reset($row); 
                                 ?>
                                 <tr>
                                     <td class="text-center fw-bold text-muted"><?php echo htmlspecialchars($studentId); ?></td>
                                     <td>
                                         <div class="d-flex align-items-center gap-3">
                                             <?php 
-                                                $ownImg = $row["ownImage"] ?? '';
+                                                $ownImg = $row["photo1"] ?? $row["ownImage"] ?? '';
                                                 $hasUserImg = (!empty($ownImg) && file_exists("uploads/" . $ownImg));
                                                 $userImg = $hasUserImg 
                                                     ? "uploads/" . htmlspecialchars($ownImg) 
@@ -258,8 +258,11 @@ $result = mysqli_stmt_get_result($stmt);
                                     
                                     <!-- 10th Marksheet -->
                                     <td class="text-center">
-                                        <?php if (!empty($row["marksheet"]) && file_exists("uploads/" . $row["marksheet"])): ?>
-                                            <?php $file10 = "uploads/" . htmlspecialchars($row["marksheet"]); ?>
+                                        <?php 
+                                            $doc10 = $row["photo2"] ?? $row["marksheet"] ?? '';
+                                            if (!empty($doc10) && file_exists("uploads/" . $doc10)): 
+                                                $file10 = "uploads/" . htmlspecialchars($doc10);
+                                        ?>
                                             <div class="doc-preview-wrapper">
                                                 <img src="<?php echo $file10; ?>" class="doc-thumbnail" title="Click to expand" onclick="previewImage('<?php echo $file10; ?>', '10th Marksheet - <?php echo htmlspecialchars($row["name"] ?? ''); ?>')">
                                             </div>
@@ -270,8 +273,11 @@ $result = mysqli_stmt_get_result($stmt);
 
                                     <!-- 12th Marksheet -->
                                     <td class="text-center">
-                                        <?php if (!empty($row["marksheet2"]) && file_exists("uploads/" . $row["marksheet2"])): ?>
-                                            <?php $file12 = "uploads/" . htmlspecialchars($row["marksheet2"]); ?>
+                                        <?php 
+                                            $doc12 = $row["photo3"] ?? $row["marksheet2"] ?? '';
+                                            if (!empty($doc12) && file_exists("uploads/" . $doc12)): 
+                                                $file12 = "uploads/" . htmlspecialchars($doc12);
+                                        ?>
                                             <div class="doc-preview-wrapper">
                                                 <img src="<?php echo $file12; ?>" class="doc-thumbnail" title="Click to expand" onclick="previewImage('<?php echo $file12; ?>', '12th Marksheet - <?php echo htmlspecialchars($row["name"] ?? ''); ?>')">
                                             </div>
@@ -282,8 +288,11 @@ $result = mysqli_stmt_get_result($stmt);
 
                                     <!-- Signature -->
                                     <td class="text-center">
-                                        <?php if (!empty($row["sign"]) && file_exists("uploads/" . $row["sign"])): ?>
-                                            <?php $fileSign = "uploads/" . htmlspecialchars($row["sign"]); ?>
+                                        <?php 
+                                            $docSign = $row["photo4"] ?? $row["sign"] ?? '';
+                                            if (!empty($docSign) && file_exists("uploads/" . $docSign)): 
+                                                $fileSign = "uploads/" . htmlspecialchars($docSign);
+                                        ?>
                                             <div class="doc-preview-wrapper">
                                                 <img src="<?php echo $fileSign; ?>" class="doc-thumbnail" title="Click to expand" onclick="previewImage('<?php echo $fileSign; ?>', 'Signature - <?php echo htmlspecialchars($row["name"] ?? ''); ?>')">
                                             </div>
