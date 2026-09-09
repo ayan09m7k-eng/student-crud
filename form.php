@@ -248,10 +248,10 @@
                 </ul>
 
                 <div class="d-flex align-items-center gap-2">
-                    <a href="view.php" class="btn btn-outline-secondary px-3 py-2 rounded-3 fw-semibold">
+                    <!-- <a href="view.php" class="btn btn-outline-secondary px-3 py-2 rounded-3 fw-semibold">
                         <i class="bi bi-folder2-open me-1"></i> View Directory
                     </a>
-                </div>
+                </div> -->
             </div>
         </div>
     </nav>

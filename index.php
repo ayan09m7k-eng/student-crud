@@ -298,7 +298,7 @@
 
                 <div class="d-flex align-items-center gap-2">
                     <a href="form.php" class="btn btn-primary px-4 py-2 rounded-3 fw-bold" style="background-color: var(--brand-blue); border: none;">
-                        <i class="bi bi-file-earmark-person me-1"></i> Enroll Student
+                        <i class="bi bi-file-earmark-person me-1"></i> Add Student
                     </a>
                 </div>
             </div>
@@ -333,11 +333,11 @@
                                 </p>
                                 <div class="d-flex flex-wrap gap-3">
                                     <a href="form.php" class="btn btn-warning px-4 py-3 fw-bold rounded-3 shadow">
-                                        <i class="bi bi-pencil-fill me-2"></i> Fill Admission Form (form.php)
+                                        <i class="bi bi-pencil-fill me-2"></i> Fill Admission Form 
                                     </a>
-                                    <a href="view.php" class="btn btn-outline-light px-4 py-3 fw-semibold rounded-3">
+                                    <!-- <a href="view.php" class="btn btn-outline-light px-4 py-3 fw-semibold rounded-3">
                                         <i class="bi bi-people-fill me-2"></i> Student Directory (view.php)
-                                    </a>
+                                    </a> -->
                                 </div>
                             </div>
                         </div>
@@ -389,9 +389,9 @@
                                     <a href="form.php" class="btn btn-warning px-4 py-3 fw-bold rounded-3 shadow">
                                         <i class="bi bi-check2-circle me-2"></i> Register Online
                                     </a>
-                                    <a href="view.php" class="btn btn-outline-light px-4 py-3 fw-semibold rounded-3">
+                                    <!-- <a href="view.php" class="btn btn-outline-light px-4 py-3 fw-semibold rounded-3">
                                         <i class="bi bi-search me-2"></i> View Records
-                                    </a>
+                                    </a> -->
                                 </div>
                             </div>
                         </div>
@@ -580,7 +580,7 @@
                 </div>
                 <div class="col-lg-4 text-lg-end">
                     <a href="form.php" class="btn btn-warning px-4 py-3 fw-bold rounded-3 shadow">
-                        <i class="bi bi-pencil-square me-1"></i> Open Admission Form (form.php)
+                        <i class="bi bi-pencil-square me-1"></i> Fil Student Form
                     </a>
                 </div>
             </div>
@@ -607,9 +607,9 @@
                     <h6 class="text-white fw-bold mb-3">Quick Navigation</h6>
                     <ul class="list-unstyled small">
                         <li class="mb-2"><a href="index.php"><i class="bi bi-chevron-right me-1"></i> Home</a></li>
-                        <li class="mb-2"><a href="form.php"><i class="bi bi-chevron-right me-1"></i> Admission Form (form.php)</a></li>
-                        <li class="mb-2"><a href="view.php"><i class="bi bi-chevron-right me-1"></i> Student Directory (view.php)</a></li>
-                        <li class="mb-2"><a href="about.php"><i class="bi bi-chevron-right me-1"></i> About Us (about.php)</a></li>
+                        <li class="mb-2"><a href="form.php"><i class="bi bi-chevron-right me-1"></i> Admission Form</a></li>
+                        <li class="mb-2"><a href="view.php"><i class="bi bi-chevron-right me-1"></i> Student Directory</a></li>
+                        <li class="mb-2"><a href="about.php"><i class="bi bi-chevron-right me-1"></i> About Us</a></li>
                     </ul>
                 </div>
 
