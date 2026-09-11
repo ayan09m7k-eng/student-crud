@@ -240,7 +240,7 @@
                         <a class="nav-link nav-link-custom active" href="form.php"><i class="bi bi-pencil-square me-1"></i> Admission Form</a>
                     </li>
                     <!-- <li class="nav-item">
-                        <a class="nav-link nav-link-custom" href="view.php"><i class="bi bi-people me-1"></i> Student Directory</a>
+                        <a class="nav-link nav-link-custom" href="admin-admin-admin-admin-admin-admin-admin-view.php"><i class="bi bi-people me-1"></i> Student Directory</a>
                     </li> -->
                     <li class="nav-item">
                         <a class="nav-link nav-link-custom" href="about.php"><i class="bi bi-info-circle me-1"></i> About Us</a>
@@ -248,7 +248,7 @@
                 </ul>
 
                 <div class="d-flex align-items-center gap-2">
-                    <!-- <a href="view.php" class="btn btn-outline-secondary px-3 py-2 rounded-3 fw-semibold">
+                    <!-- <a href="admin-admin-admin-admin-admin-admin-admin-view.php" class="btn btn-outline-secondary px-3 py-2 rounded-3 fw-semibold">
                         <i class="bi bi-folder2-open me-1"></i> View Directory
                     </a>
                 </div> -->

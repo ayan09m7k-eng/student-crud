@@ -10,6 +10,6 @@ else {
     echo "Delete failed";
 }
 
-header("Location:view.php");
+header("Location:admin-view.php");
 exit();
 ?>

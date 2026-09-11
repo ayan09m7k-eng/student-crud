@@ -199,7 +199,7 @@ $result = mysqli_stmt_get_result($stmt);
             <div class="p-4 border-bottom bg-light bg-opacity-25">
                 <div class="row g-3 align-items-center">
                     <div class="col-md-6">
-                        <form method="GET" action="view.php" class="d-flex gap-2">
+                        <form method="GET" action="admin-view.php" class="d-flex gap-2">
                             <div class="input-group shadow-sm rounded-3 overflow-hidden">
                                 <span class="input-group-text bg-white border-end-0 ps-3"><i class="bi bi-search text-muted"></i></span>
                                 <input type="text" name="search" class="form-control border-start-0 ps-0 py-2" placeholder="Search by name or email..." value="<?php echo htmlspecialchars($search); ?>">
@@ -207,19 +207,23 @@ $result = mysqli_stmt_get_result($stmt);
                                 <button class="btn btn-primary px-4 fw-semibold" type="submit">Search</button>
                             </div>
                             <?php if (!empty($search)): ?>
-                                <a href="view.php" class="btn btn-outline-secondary d-flex align-items-center rounded-3" title="Reset Search"><i class="bi bi-x-lg"></i></a>
+                                <a href="admin-view.php" class="btn btn-outline-secondary d-flex align-items-center rounded-3" title="Reset Search"><i class="bi bi-x-lg"></i></a>
                             <?php endif; ?>
                         </form>
                     </div>
                     <div class="col-md-6 d-flex justify-content-md-end align-items-center gap-2">
                         <span class="text-muted small fw-semibold me-2">Sort Order:</span>
                         <div class="btn-group shadow-sm" role="group">
-                            <a href="view.php?search=<?php echo urlencode($search); ?>&sort=asc" class="btn btn-sm btn-outline-secondary px-3 py-2 <?php echo ($sort === 'ASC') ? 'active fw-bold' : ''; ?>">
+                            <a href="admin-view.php?search=<?php echo urlencode($search); ?>&sort=asc" class="btn btn-sm btn-outline-secondary px-3 py-2 <?php echo ($sort === 'ASC') ? 'active fw-bold' : ''; ?>">
                                 <i class="bi bi-sort-alpha-down me-1"></i> A-Z
                             </a>
-                            <a href="view.php?search=<?php echo urlencode($search); ?>&sort=desc" class="btn btn-sm btn-outline-secondary px-3 py-2 <?php echo ($sort === 'DESC') ? 'active fw-bold' : ''; ?>">
+                            <a href="admin-view.php?search=<?php echo urlencode($search); ?>&sort=desc" class="btn btn-sm btn-outline-secondary px-3 py-2 <?php echo ($sort === 'DESC') ? 'active fw-bold' : ''; ?>">
                                 <i class="bi bi-sort-alpha-up-alt me-1"></i> Z-A
                             </a>
+                            <a href="logout.php" style="text-decoration: none; border: 2px groove black; background-color: #3b82f6; width: 100px;height: 45px;display:flex;
+    text-align:center;justify-content:center;padding:5px;color:white;margin:15px 0 0 35px;border-radius:5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-airplane-fill" viewBox="0 0 16 16">
+  <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849"/>
+</svg> logout</a>
                         </div>
                     </div>
                 </div>
@@ -372,6 +376,8 @@ $result = mysqli_stmt_get_result($stmt);
             </div>
         </div>
     </div>
+
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>

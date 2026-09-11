@@ -8,7 +8,7 @@ $row = mysqli_fetch_assoc($result);
 if (!$row) {
     echo "<div style='font-family:sans-serif; text-align:center; padding:50px;'>";
     echo "<h3>Student record not found.</h3>";
-    echo "<a href='view.php'>Return to Student Directory</a>";
+    echo "<a href='admin-view.php'>Return to Student Directory</a>";
     echo "</div>";
     exit();
 }
@@ -60,7 +60,7 @@ $currentPhoto4 = $row['photo4'] ?? $row['sign'] ?? '';
                 <i class="bi bi-mortarboard-fill me-1"></i> Student Portal
             </a>
             <div class="ms-auto">
-                <a href="view.php" class="btn btn-sm btn-outline-secondary">
+                <a href="admin-view.php" class="btn btn-sm btn-outline-secondary">
                     <i class="bi bi-arrow-left me-1"></i> Back to Directory
                 </a>
             </div>

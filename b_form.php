@@ -61,8 +61,8 @@ if (isset($_POST["submit"])) {
             mysqli_stmt_bind_param($stmt, "ssssss", $name, $email, $ownImage, $marksheet, $marksheet2, $sign);
             if (mysqli_stmt_execute($stmt)) {
                 $success = true;
-                // Redirect directly to view.php so the user sees their new entry in the database table
-                header("Location: view.php");
+                // Redirect directly to admin.admin.admin.admin.admin.admin.admin.admin.admin.view.php so the user sees their new entry in the database table
+                header("Location: admin-view.php");
                 exit();
             } else {
                 $message = "Database Insert Error: " . mysqli_error($conn);
@@ -73,7 +73,7 @@ if (isset($_POST["submit"])) {
                        VALUES ('$name', '$email', '$ownImage', '$marksheet', '$marksheet2', '$sign')";
             if (mysqli_query($conn, $sqlRaw)) {
                 $success = true;
-                header("Location: view.php");
+                header("Location: admin-view.php");
                 exit();
             } else {
                 $message = "Database Error: " . mysqli_error($conn);
@@ -97,7 +97,7 @@ if (isset($_POST["submit"])) {
                 <div class="text-success display-4 mb-3">✓</div>
                 <h4 class="fw-bold mb-2">Registration Successful!</h4>
                 <p class="text-muted mb-4">Student information has been saved into the database.</p>
-                <a href="view.php" class="btn btn-primary px-4 py-2">View in Student Directory</a>
+                <a href="admin.admin.admin.admin.admin.admin.admin.admin.admin.view.php" class="btn btn-primary px-4 py-2">View in Student Directory</a>
             <?php else: ?>
                 <div class="text-danger display-4 mb-3">✕</div>
                 <h4 class="fw-bold mb-2">Registration Failed</h4>

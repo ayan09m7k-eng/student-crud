@@ -40,7 +40,7 @@ if (isset($_POST["update"]) || isset($_POST["submit"])) {
     if ($stmt) {
         mysqli_stmt_bind_param($stmt, "ssssssii", $name, $email, $photo1, $photo2, $photo3, $photo4, $id, $id);
         if (mysqli_stmt_execute($stmt)) {
-            header("Location: view.php");
+            header("Location: admin-view.php");
             exit();
         } else {
             echo "Failed to update record: " . mysqli_error($conn);
@@ -56,14 +56,14 @@ if (isset($_POST["update"]) || isset($_POST["submit"])) {
                        photo4 = '$photo4'
                    WHERE ID = $id OR id = $id";
         if (mysqli_query($conn, $sqlRaw)) {
-            header("Location: view.php");
+            header("Location: admin-view.php");
             exit();
         } else {
             echo "Failed to update record: " . mysqli_error($conn);
         }
     }
 } else {
-    header("Location: view.php");
+    header("Location: admin-view.php");
     exit();
 }
 ?>
