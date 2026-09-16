@@ -17,17 +17,8 @@ student-crud — a software project built with modern tooling.
 
 ## 📸 Screenshots
 
-![1788162579 Screenshot 2026 06 19 195234](https://raw.githubusercontent.com/ayan09m7k-eng/student-crud/main/uploads/1788162579_Screenshot 2026-06-19 195234.png)
+<img width="1920" height="3511" alt="screencapture-localhost-8080-student-crud-2026-09-16-19_07_06" src="https://github.com/user-attachments/assets/ab61c7c3-8373-4ea5-ac17-e9543d198195" />
 
-![1788162579 Screenshot 2026 06 21 142415](https://raw.githubusercontent.com/ayan09m7k-eng/student-crud/main/uploads/1788162579_Screenshot 2026-06-21 142415.png)
-
-![1788162579 Screenshot 2026 06 29 110926](https://raw.githubusercontent.com/ayan09m7k-eng/student-crud/main/uploads/1788162579_Screenshot 2026-06-29 110926.png)
-
-![1788162579 Screenshot 2026 06 29 111008](https://raw.githubusercontent.com/ayan09m7k-eng/student-crud/main/uploads/1788162579_Screenshot 2026-06-29 111008.png)
-
-![1788162912 Screenshot 2026 06 19 195234](https://raw.githubusercontent.com/ayan09m7k-eng/student-crud/main/uploads/1788162912_Screenshot 2026-06-19 195234.png)
-
-![1788162912 Screenshot 2026 06 21 141454](https://raw.githubusercontent.com/ayan09m7k-eng/student-crud/main/uploads/1788162912_Screenshot 2026-06-21 141454.png)
 
 ## ⚡ Quick Start
 
