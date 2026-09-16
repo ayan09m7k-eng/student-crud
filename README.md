@@ -15,7 +15,7 @@
 
 student-crud — a software project built with modern tooling.
 
-## 📸 Screenshot
+## 📸 Screenshots
 
 <img width="1920" height="3511" alt="screencapture-localhost-8080-student-crud-2026-09-16-19_07_06" src="https://github.com/user-attachments/assets/ab61c7c3-8373-4ea5-ac17-e9543d198195" />
 
