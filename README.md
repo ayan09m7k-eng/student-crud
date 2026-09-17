@@ -8,7 +8,7 @@
 - [Screenshots](#screenshots)
 - [Quick Start](#quick-start)
 - [Project Structure](#project-structure)
-- [Contributors](#contributors)
+- [Contributors](##contributors)
 - [Contributing](#contributing)
 
 ## 📝 Description
